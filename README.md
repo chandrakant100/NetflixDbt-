@@ -1,1 +1,1 @@
-## ELT Using dbt for netflix data processing
+## ELT Pipeline Using dbt for netflix data processing
