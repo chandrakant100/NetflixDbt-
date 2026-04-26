@@ -5,5 +5,5 @@ select
     USERID as user_id,
     MOVIEID as movie_id,
     TAG as tag,
-    To_TIMESTAMP_LTZ(TIMESTAMP) as timestamp
+    To_TIMESTAMP_LTZ(TIMESTAMP) as timestamp_tag
 from tagsraw
