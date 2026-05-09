@@ -1,0 +1,27 @@
+models:
+  - name: dim_movies
+    description: "A dimension table containing movie information."
+    columns:
+      - name: movie_id
+        tests:
+          - not_null
+          - unique
+      - name: title
+        description: "The title of the movie."
+        tests:
+          - not_null
+      - name: genres_array
+        description: "An array of genres associated with the movie."
+      - name: genres
+        description: "A string of genres associated with the movie, separated by '|'."
+  - name: dim_tags
+    description: "A dimension table containing tag information."
+    columns:
+      - name: tag_id
+        tests:
+          - not_null
+          - unique
+      - name: tag
+        description: "The tag associated with the movie."
+        tests:
+          - not_null

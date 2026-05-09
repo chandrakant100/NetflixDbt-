@@ -10,3 +10,4 @@ select
     tag_id,
     round(relevance, 4) as relevance
 from gnome_score
+where relevance > 0
