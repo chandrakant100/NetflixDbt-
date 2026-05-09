@@ -8,3 +8,12 @@
     invalidate_hard_deletes=True
 )}}
 
+select 
+{{dbt_utils.generate_surrogate_key(['user_id', 'movie_id', 'tag'])}} as tag_id,
+    user_id,
+    movie_id,
+    tag,
+    timestamp_tag
+from {{ ref('src_tags') }}
+
+{% endsnapshot %}
