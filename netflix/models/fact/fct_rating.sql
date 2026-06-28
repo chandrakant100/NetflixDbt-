@@ -13,7 +13,7 @@ select
     movie_id,
     rating,
     timestamp_rating
-from src_ratings where rating is not null
+from src_ratings where rating is not null and movie_id is not null
 
 {% if is_incremental() %}
     where timestamp_rating > (select max(timestamp_rating) from {{ this }})
